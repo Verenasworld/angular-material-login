@@ -2,15 +2,15 @@
 
 @include mat-core();
 
-$my-theme-primary: mat-palette($mat-deep-orange);
-$my-theme-accent: mat-palette($mat-brown, A100, A300, A500);
+$my-theme-primary: mat-palette($mat-blue);
+$my-theme-accent: mat-palette($mat-deep-orange);
 $my-theme-warn: mat-palette($mat-red);
 
-$my-dark-theme: mat-dark-theme($mat-dark-theme-background);
-$my-light-theme: mat-light-theme($mat-light-theme-background);
-
-$my-bluelover-theme: mat-palette($mat-blue-grey, A400, A700, A500);
-$my-pinklover-theme: mat-palette($mat-purple, A200, A300, A400);
+//$my-dark-theme: mat-dark-theme($mat-dark-theme-background);
+//$my-light-theme: mat-light-theme($mat-light-theme-background);
+//
+//$my-bluelover-theme: mat-palette($mat-blue-grey, A400, A700, A500);
+//$my-pinklover-theme: mat-palette($mat-purple, A200, A300, A400);
 
 $my-theme: mat-light-theme($my-theme-primary, $my-theme-accent, $my-theme-warn );
 
