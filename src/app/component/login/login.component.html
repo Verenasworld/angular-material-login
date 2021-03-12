@@ -14,23 +14,31 @@
       </mat-form-field>
     </div>
     <div>
-      <span class="alink">Forgot Password?</span>
+
       <mat-form-field class="full-widht" appearance="outline">
         <mat-label>Password</mat-label>
         <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required/>
-        <button mat-icon-button matSuffix (click)="hide = !hide"
+        <button mat-icon-button matSuffix (click)="hide = !hide " color="primary"
         [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide">
           <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
         </button>
         <mat-error *ngIf="loginForm.controls['password']">Password is invalid, please enter min length 6 numbers </mat-error>
       </mat-form-field>
+      <span>
+            <a class="aLink" routerLink="/auth/forgot-password">Forgot Password?</a>
+          </span>
     </div>
-     <div class="full-widht">
+     <div class="abstand">
        <button mat-flat-button color="accent" (click)="onLogin()">Login</button>
        <button mat-flat-button color="primary" (click)="createNewAccount()">New Account</button>
      </div>
-
     </form>
+    <div>
+      <mat-radio-group>
+        <mat-radio-button>here</mat-radio-button>
+        <mat-radio-button>ore here</mat-radio-button>
+      </mat-radio-group>
+    </div>
 
   </mat-card-content>
 </mat-card>
