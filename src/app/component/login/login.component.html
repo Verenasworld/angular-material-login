@@ -1,3 +1,27 @@
-<h1>thats working great </h1>
-<button mat-button color="primary">hallooo</button>
+<mat-card>
+  <mat-card-content>
+    <div class="header">
+      <h2>Sign Into Your Account!</h2>
+    </div>
+    <form (ngSubmit) ="onLogin()" name="loginForm" [formGroup]="loginForm" >
+    <div class="email-input">
+      <mat-form-field class="full-widht" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput required>
+        <mat-error *ngIf="!loginForm.controls['email'].valid">
+          Required email address
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <span class="alink">Forgot Password?</span>
+      <mat-form-field class="full-widht" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required/>
+        <button mat-icon-button matSuffix (click)="hide = !hide"></button>
+      </mat-form-field>
+    </div>
+    </form>
+  </mat-card-content>
+</mat-card>
 
