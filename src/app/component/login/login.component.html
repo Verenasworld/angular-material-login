@@ -3,6 +3,7 @@
     <div class="header">
       <h2>Sign Into Your Account!</h2>
     </div>
+
     <form (ngSubmit) ="onLogin()" name="loginForm" [formGroup]="loginForm" >
     <div class="email-input">
       <mat-form-field class="full-widht" appearance="outline">
@@ -14,7 +15,6 @@
       </mat-form-field>
     </div>
     <div>
-
       <mat-form-field class="full-widht" appearance="outline">
         <mat-label>Password</mat-label>
         <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required/>
@@ -26,19 +26,23 @@
       </mat-form-field>
       <span>
             <a class="aLink" routerLink="/auth/forgot-password">Forgot Password?</a>
+<!--        user kann ein neues Passwort erstellen ist das in einer Snackbar möglich??? -->
           </span>
     </div>
-     <div class="abstand">
-       <button mat-flat-button color="accent" (click)="onLogin()">Login</button>
-       <button mat-flat-button color="primary" (click)="createNewAccount()">New Account</button>
+     <div class="button-row">
+       <div class="flex-container">
+         <button mat-raised-button color="accent" (click)="onLogin()">Login</button>
+         <button  mat-stroked-button color="primary" (click)="createNewAccount()">New Account</button>
+       </div>
      </div>
-    </form>
+
     <div>
-      <mat-radio-group>
-        <mat-radio-button>here</mat-radio-button>
-        <mat-radio-button>ore here</mat-radio-button>
+      <mat-radio-group formControlName="newsletter" aria-labelledby="do you want subscribe to our newsletter">
+        <mat-radio-button value="subscribe" checked>want the super Newsletter</mat-radio-button>
+<!--        abbonieren den Newaletter , was sind die nächsten schritte -->
       </mat-radio-group>
     </div>
+    </form>
 
   </mat-card-content>
 </mat-card>
