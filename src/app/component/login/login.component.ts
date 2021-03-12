@@ -22,6 +22,12 @@ export class LoginComponent implements OnInit {
     }
   );
   onLogin(){
-    console.log('it works ');
+    if(!this.loginForm.valid){
+    return;
+    }
+    console.log(this.loginForm.value);
+  }
+  createNewAccount(){
+    console.log('registerform loading');
   }
 }

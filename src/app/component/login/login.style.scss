@@ -3,15 +3,22 @@ mat-card{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 30%;
+  min-height: 40%;
 }
 
 .header{
-  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+h2{
+  font-weight: lighter;
+  font-size: 25px;
 }
 
 .full-widht{
   width: 100%;
+  flex-wrap: wrap;
+
 }
 .forgot-password{
 
@@ -23,3 +30,4 @@ mat-card{
 .aLink{
 
 }
+
