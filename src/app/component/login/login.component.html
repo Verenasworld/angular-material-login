@@ -1,3 +1,37 @@
-<h1>thats working great </h1>
-<button mat-button color="primary">hallooo</button>
+<mat-card>
+  <mat-card-content>
+    <div class="header">
+      <h2>Sign Into Your Account!</h2>
+    </div>
+    <form (ngSubmit) ="onLogin()" name="loginForm" [formGroup]="loginForm" >
+    <div class="email-input">
+      <mat-form-field class="full-widht" appearance="outline">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput required placeholder="Enter email address">
+        <mat-error *ngIf="!loginForm.controls['email'].valid">
+          Email is invalid, please enter a email address
+        </mat-error>
+      </mat-form-field>
+    </div>
+    <div>
+      <span class="alink">Forgot Password?</span>
+      <mat-form-field class="full-widht" appearance="outline">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput [type]="hide ? 'password' : 'text'" required/>
+        <button mat-icon-button matSuffix (click)="hide = !hide"
+        [attr.aria-label]="'Hide Password'" [attr.aria-pressed]="hide">
+          <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+        </button>
+        <mat-error *ngIf="loginForm.controls['password']">Password is invalid, please enter min length 6 numbers </mat-error>
+      </mat-form-field>
+    </div>
+     <div class="full-widht">
+       <button mat-flat-button color="accent" (click)="onLogin()">Login</button>
+       <button mat-flat-button color="primary" (click)="createNewAccount()">New Account</button>
+     </div>
+
+    </form>
+
+  </mat-card-content>
+</mat-card>
 
