@@ -9,6 +9,7 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {LoginComponent} from "./component/login/login.component";
 import { RegistrationformComponent } from './component/registrationform/registrationform.component';
 import {FlexLayoutModule} from "@angular/flex-layout";
+import { PasswordresetComponent } from './component/passwordreset/passwordreset.component';
 
 
 
@@ -19,7 +20,8 @@ import {FlexLayoutModule} from "@angular/flex-layout";
   declarations: [
     AppComponent,
     LoginComponent,
-    RegistrationformComponent
+    RegistrationformComponent,
+    PasswordresetComponent
   ],
   imports: [
     BrowserModule,

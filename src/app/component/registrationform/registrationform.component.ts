@@ -35,6 +35,9 @@ export class RegistrationformComponent implements OnInit {
   }
 
   saveForm() {
+    if (!this.registaForm.valid){
+      return;
+    }
     console.log(this.registaForm.value);
   }
 }
