@@ -1,38 +1,57 @@
 <mat-card>
   <mat-card-content>
     <div class="header">
-      Now it's your turn to regain control and step into Verinaworld
+     <h2> Registration Form</h2>
     </div>
     <form class="example-form">
-
-      <mat-form-field class="example-full-width">
-        <mat-label>First Name</mat-label>
-        <input matInput value="Your Username">
-      </mat-form-field>
-
-
-
-        <mat-form-field class="example-full-width">
-          <mat-label>Second Name</mat-label>
-          <textarea matInput placeholder="Second Name"></textarea>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <div fxFlex="50%">
+          <mat-form-field  class="example-full-width" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input matInput placeholder="First Name">
         </mat-form-field>
-        <mat-form-field class="example-full-width">
-          <mat-label>Address 2</mat-label>
-          <textarea matInput></textarea>
+        </div>
+        <div fxFlex="50%">
+       <mat-form-field class="example-full-width" appearance="outline">
+       <mat-label>Second Name</mat-label>
+       <input matInput placeholder="Second Name">
+     </mat-form-field>
+     </div>
+      </div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Address</mat-label>
+          <input matInput placeholder="write your full Address">
         </mat-form-field>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <div fxFlex="50%">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Telephone</mat-label>
+            <span matPrefix>+43 &nbsp;</span>
+            <input type="tel" matInput placeholder="555-555-1234">
+            <mat-icon matSuffix color="accent">mode_edit</mat-icon>
+          </mat-form-field>
+        </div>
+        <div div fxFlex="50%">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <span matPrefix></span>
+            <input type="email" matInput placeholder="ecample@gmail.com">
+            <mat-icon matSuffix color="accent">email</mat-icon>
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <mat-form-field  class="example-full-width" appearance="outline">
+          <mat-label>Password</mat-label>
+          <input matInput/>
+        </mat-form-field>
+      </div>
+      <div>
+        <button mat-raised-button color="primary">Create Account</button>
+      </div>
 
-      <mat-form-field class="example-full-width">
-        <mat-label>Telephone</mat-label>
-        <span matPrefix>+43 &nbsp;</span>
-        <input type="tel" matInput placeholder="555-555-1234">
-        <mat-icon matSuffix>mode_edit</mat-icon>
-      </mat-form-field>
-      <mat-form-field class="example-full-width">
-        <mat-label>Email</mat-label>
-        <span matPrefix></span>
-        <input type="email" matInput placeholder="ecample@gmail.com">
-        <mat-icon matSuffix>email</mat-icon>
-      </mat-form-field>
+
+
 
 
 

@@ -6,6 +6,7 @@ import {MatIconModule} from "@angular/material/icon";
 import {MatRadioModule} from "@angular/material/radio";
 import {MatDividerModule} from "@angular/material/divider";
 import {MatCheckboxModule} from "@angular/material/checkbox";
+import {MatDatepickerModule} from "@angular/material/datepicker";
 
 @NgModule({
   declarations: [],
@@ -16,7 +17,8 @@ import {MatCheckboxModule} from "@angular/material/checkbox";
     MatIconModule,
     MatRadioModule,
     MatDividerModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatDatepickerModule
   ]
 })
 

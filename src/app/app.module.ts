@@ -8,6 +8,8 @@ import {MaterialModule} from './share/material.module';
 import {ReactiveFormsModule} from "@angular/forms";
 import {LoginComponent} from "./component/login/login.component";
 import { RegistrationformComponent } from './component/registrationform/registrationform.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+
 
 
 
@@ -24,7 +26,9 @@ import { RegistrationformComponent } from './component/registrationform/registra
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]
