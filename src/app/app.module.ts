@@ -7,6 +7,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MaterialModule} from './share/material.module';
 import {ReactiveFormsModule} from "@angular/forms";
 import {LoginComponent} from "./component/login/login.component";
+import { RegistrationformComponent } from './component/registrationform/registrationform.component';
+import {FlexLayoutModule} from "@angular/flex-layout";
+
 
 
 
@@ -15,14 +18,17 @@ import {LoginComponent} from "./component/login/login.component";
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    RegistrationformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FlexLayoutModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,104 @@
+<mat-card>
+  <mat-card-content>
+    <div class="header">
+     <h2> Registration Form</h2>
+    </div>
+    <form [formGroup]="registaForm"
+          class="example-form">
+      <div fxLayout="row"
+        fxLayoutGap="10px">
+        <div fxFlex="50%">
+          <mat-form-field  class="example-full-width" appearance="outline">
+          <mat-label>First Name</mat-label>
+          <input
+            formControlName="name"
+            matInput
+            placeholder="First Name"
+            required
+            value="">
+            <mat-error *ngIf="registaForm.controls['name']">Please enter your Name. </mat-error>
+        </mat-form-field>
+        </div>
+        <div fxFlex="50%">
+       <mat-form-field class="example-full-width" appearance="outline">
+       <mat-label>Second Name</mat-label>
+       <input
+         formControlName="sname"
+         matInput
+         placeholder="Second Name"
+         value="">
+     </mat-form-field>
+     </div>
+      </div>
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>Address</mat-label>
+          <input
+            formControlName="address"
+            matInput
+            placeholder="write your full Address"
+           value="">
+        </mat-form-field>
+      <div fxLayout="row" fxLayoutGap="10px">
+        <div fxFlex="10%">
+          <mat-form-field color="accent" class="example-full-width" appearance="outline">
+            <mat-label>+43</mat-label>
+            <mat-select formControlName="prefix">
+              <mat-option *ngFor="let prefix of prefixs" [value]="prefix.value">
+                {{prefix.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div fxFlex="40%">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Telephone</mat-label>
+            <input
+                formControlName="phone"
+                type="number"
+                matInput
+                placeholder="123-456-7891"
+                value="">
+            <mat-icon matSuffix color="accent">phone</mat-icon>
+            <mat-error *ngIf="registaForm.controls['phone']">you have write only the last 10 numbers </mat-error>
+          </mat-form-field>
+        </div>
+        <div div fxFlex="50%">
+          <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>Email</mat-label>
+            <span matPrefix></span>
+            <input
+              formControlName="email"
+              type="email"
+              matInput
+              placeholder="ecample@gmail.com"
+              value=""
+            required>
+            <mat-icon
+              matSuffix
+              color="accent">email</mat-icon>
+            <mat-error *ngIf="registaForm.controls['email']">Please enter your Email. </mat-error>
+          </mat-form-field>
+        </div>
+      </div>
+      <div>
+        <mat-form-field  class="example-full-width" appearance="outline">
+          <mat-label class="password">Password</mat-label>
+          <input
+            formControlName="password"
+            name="password"
+            class="form-control"
+            matInput
+            placeholder="Enter your Password"
+            required
+            value=""/>
+          <mat-error *ngIf="registaForm.controls['password']">Please enter a password, you can change it at your Dasboard. </mat-error>
+        </mat-form-field>
+
+      </div>
+      <div>
+        <button mat-raised-button color="primary" (click)="saveForm()">Create Account</button>
+<!--        on create account , save data - rout to login and auto complete fill data and than button Log in  -->
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

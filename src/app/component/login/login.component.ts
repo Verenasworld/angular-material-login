@@ -20,10 +20,11 @@ export class LoginComponent implements OnInit {
     {
       email: new FormControl('', [Validators.required, Validators.email ]),
       password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      newsletter : new FormControl ('false', )
     }
   );
   onLogin(){
-    if(!this.loginForm.valid){
+    if (!this.loginForm.valid){
     return;
     }
     console.log(this.loginForm.value);
