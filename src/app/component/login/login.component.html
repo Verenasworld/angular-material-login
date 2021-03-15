@@ -25,13 +25,14 @@
         <mat-error *ngIf="loginForm.controls['password']">Password is invalid, please enter min length 6 numbers </mat-error>
       </mat-form-field>
       <span>
-            <a class="aLink" routerLink="/auth/forgot-password">Forgot Password?</a>
+            <a class="aLink" routerLink="/reset">Forgot Password?</a>
 <!--        user kann ein neues Passwort erstellen ist das in einer Snackbar möglich??? -->
           </span>
     </div>
      <div class="button-row" >
        <div class="flex-container" fxLayoutGap="10px">
          <button mat-raised-button color="accent" (click)="onLogin()">Login</button>
+<!--         wenn form ausgefüllt und user regestriert ist erst Login Button click Login zu Daschboard-->
          <button routerLink="/regista" mat-stroked-button color="primary" (click)="createNewAccount()">New Account</button>
        </div>
      </div>
